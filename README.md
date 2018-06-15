@@ -15,3 +15,13 @@ Using recursion approach
     (first arr)
     (nth (rest arr) (- n 1))))
 ```
+
+Lazy Fibonacci sequence
+
+```clojure
+(defn fib [n]
+  (take n (map first
+               (iterate
+                (fn [[a b]] [b (+ a b)])
+                [1 1]))))
+```
