@@ -7,7 +7,7 @@
   ((comp last (partial take (inc n))) arr))
 ```
 
-Using recursion approach
+Using recursion approach. eg
 
 ```clojure
 (defn nth [arr n]
